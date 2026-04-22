@@ -1,0 +1,11 @@
+{
+  "id": "bulk-workflows",
+  "title": "Bulk Item Operations",
+  "description": "Enables efficient batch processing of items in Surpass IQ — tagging, moving, analysing, and updating multiple items at once with built-in safety checks.",
+  "category": "Bulk Workflows",
+  "tags": ["bulk", "batch", "efficiency", "automation"],
+  "author": "Surpass Community",
+  "version": "1.0",
+  "date": "2025-04-15",
+  "skill_file": "skills/bulk-workflows/SKILL.md"
+}

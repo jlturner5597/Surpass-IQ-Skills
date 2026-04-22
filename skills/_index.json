@@ -1,0 +1,35 @@
+[
+  {
+    "id": "item-authoring",
+    "title": "Clinical Vignette Item Authoring",
+    "description": "Guides Surpass IQ to author clinical vignette MCQs following established best practices, including stem structure, distractor construction, and common pitfalls to avoid.",
+    "category": "Item Authoring",
+    "tags": ["MCQ", "clinical", "healthcare", "vignette"],
+    "author": "Surpass Community",
+    "version": "1.0",
+    "date": "2025-04-01",
+    "skill_file": "skills/item-authoring/SKILL.md"
+  },
+  {
+    "id": "tag-management",
+    "title": "Smart Tag Hierarchy Builder",
+    "description": "Configures Surpass IQ to design and implement well-structured tag hierarchies and collections, following best practices for scalable, maintainable taxonomies.",
+    "category": "Tag Management",
+    "tags": ["tags", "taxonomy", "hierarchy", "metadata"],
+    "author": "Surpass Community",
+    "version": "1.0",
+    "date": "2025-04-10",
+    "skill_file": "skills/tag-management/SKILL.md"
+  },
+  {
+    "id": "bulk-workflows",
+    "title": "Bulk Item Operations",
+    "description": "Enables efficient batch processing of items in Surpass IQ — tagging, moving, analysing, and updating multiple items at once with built-in safety checks.",
+    "category": "Bulk Workflows",
+    "tags": ["bulk", "batch", "efficiency", "automation"],
+    "author": "Surpass Community",
+    "version": "1.0",
+    "date": "2025-04-15",
+    "skill_file": "skills/bulk-workflows/SKILL.md"
+  }
+]

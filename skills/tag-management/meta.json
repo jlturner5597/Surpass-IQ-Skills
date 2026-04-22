@@ -1,0 +1,11 @@
+{
+  "id": "tag-management",
+  "title": "Smart Tag Hierarchy Builder",
+  "description": "Configures Surpass IQ to design and implement well-structured tag hierarchies and collections, following best practices for scalable, maintainable taxonomies.",
+  "category": "Tag Management",
+  "tags": ["tags", "taxonomy", "hierarchy", "metadata"],
+  "author": "Surpass Community",
+  "version": "1.0",
+  "date": "2025-04-10",
+  "skill_file": "skills/tag-management/SKILL.md"
+}

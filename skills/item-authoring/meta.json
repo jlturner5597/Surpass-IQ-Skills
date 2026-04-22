@@ -1,0 +1,11 @@
+{
+  "id": "item-authoring",
+  "title": "Clinical Vignette Item Authoring",
+  "description": "Guides Surpass IQ to author clinical vignette MCQs following established best practices, including stem structure, distractor construction, and common pitfalls to avoid.",
+  "category": "Item Authoring",
+  "tags": ["MCQ", "clinical", "healthcare", "vignette"],
+  "author": "Surpass Community",
+  "version": "1.0",
+  "date": "2025-04-01",
+  "skill_file": "skills/item-authoring/SKILL.md"
+}
