@@ -6,7 +6,9 @@
   <meta name="description" content="Submit a community Claude Code Skill for Surpass IQ. Skills are reviewed by the Surpass team before being published.">
   <title>Submit a Skill — Surpass IQ Community Skills</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,37 +17,40 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-mark">S</span>
-        Surpass IQ Skills
+        <span class="nav-logo-text">
+          <span>Surpass IQ Skills</span>
+          <span class="nav-logo-sub">Community Library</span>
+        </span>
       </a>
       <div class="nav-links">
-        <a href="index.html" class="nav-link">Browse Skills</a>
+        <a href="index.html" class="nav-link">Browse</a>
+        <a href="guidelines.html" class="nav-link">Guidelines</a>
         <a href="submit.html" class="nav-link nav-link-cta active">Submit a Skill</a>
       </div>
     </div>
   </nav>
 
-  <!-- Page Header -->
+  <!-- Page header -->
   <header class="page-header">
     <div class="page-header-inner">
-      <h1 class="page-title">Submit a Skill</h1>
-      <p class="page-subtitle">Share your expertise with the Surpass IQ community. Submitted skills are reviewed by the Surpass team before being published.</p>
+      <span class="eyebrow">Contribute</span>
+      <h1 class="page-title">Share a skill with the <em>community.</em></h1>
+      <p class="page-subtitle">Bring your hard-won Surpass IQ expertise to the wider community. Submissions are reviewed by the Surpass team — most are published within 5 working days.</p>
     </div>
   </header>
 
-  <!-- Page Content -->
-  <div style="background: #f5f8fa;">
-    <div class="page-content">
+  <!-- Page content: two-column editorial -->
+  <div class="page-content">
+    <div class="page-content-main">
 
-      <!-- What is a skill? -->
-      <div class="content-section">
-        <h2>What is a Skill?</h2>
+      <section class="content-section">
+        <h2><span class="section-num">01.</span> What is a Skill?</h2>
         <p>A <strong>Skill</strong> is a structured instruction set — typically a system prompt or workflow guide — that configures Surpass IQ to perform a specific task exceptionally well. Skills encapsulate expert knowledge about how to use Surpass IQ for a particular use case, so others can benefit without having to figure it out from scratch.</p>
         <p>For example, a skill might teach Surpass IQ to author clinical vignette MCQs using established best practices, or to structure a tag hierarchy for a specific discipline.</p>
-      </div>
+      </section>
 
-      <!-- What makes a good skill? -->
-      <div class="content-section">
-        <h2>What Makes a Good Skill?</h2>
+      <section class="content-section">
+        <h2><span class="section-num">02.</span> What makes a good skill?</h2>
         <ul>
           <li><strong>Focused on a single use case</strong> — it does one thing well, rather than trying to cover everything.</li>
           <li><strong>Includes clear instructions</strong> — the skill file tells Surpass IQ exactly what to do, in what format, and with what constraints.</li>
@@ -53,32 +58,58 @@
           <li><strong>Tested</strong> — you've used it yourself and it produces consistent, high-quality results.</li>
         </ul>
         <p>Read the <a href="CONTRIBUTING.md">Contributing Guide</a> for full formatting instructions and the expected file structure.</p>
-      </div>
+      </section>
 
-      <!-- Submit CTA -->
-      <div class="submit-cta">
-        <p>Ready to share? Fill in the submission form below. The Surpass team will review your skill and be in touch within 5 working days.</p>
-        <a href="#google-form-placeholder" class="btn btn-yellow btn-lg">Submit a Skill →</a>
-      </div>
-
-      <!-- Review process -->
-      <div class="content-section">
-        <h2>The Review Process</h2>
-        <ol>
-          <li><strong>Submit</strong> — Complete the Google Form with your skill title, category, description, and the full skill content.</li>
-          <li><strong>Review</strong> — A member of the Surpass team reads and tests your skill, usually within 5 working days.</li>
-          <li><strong>Feedback</strong> — If changes are needed, we'll get in touch via the email address you provide. Most skills are approved with minor edits.</li>
-          <li><strong>Published</strong> — Approved skills are formatted, added to the repository, and appear on this site automatically within minutes of merging.</li>
+      <section class="content-section">
+        <h2><span class="section-num">03.</span> The review process</h2>
+        <ol class="review-steps">
+          <li><strong>Submit.</strong> Complete the Google Form with your skill title, category, description, and the full skill content.</li>
+          <li><strong>Review.</strong> A member of the Surpass team reads and tests your skill, usually within 5 working days.</li>
+          <li><strong>Feedback.</strong> If changes are needed, we'll get in touch via the email address you provide. Most skills are approved with minor edits.</li>
+          <li><strong>Published.</strong> Approved skills are formatted, added to the repository, and appear on this site automatically within minutes of merging.</li>
         </ol>
-        <p>By submitting a skill, you agree that it may be published under the community licence and credited to you (or your organisation) as specified in your submission.</p>
-      </div>
+        <p style="margin-top: 12px;">By submitting a skill, you agree that it may be published under the community licence and credited to you (or your organisation) as specified in your submission.</p>
+      </section>
 
     </div>
+
+    <!-- Sticky sidebar CTA -->
+    <aside class="page-content-aside">
+      <div class="submit-cta">
+        <span class="eyebrow">Ready when you are</span>
+        <h3>Submit your skill</h3>
+        <p>Fill in the submission form and the Surpass team will be in touch within 5 working days.</p>
+        <a href="#google-form-placeholder" class="btn btn-yellow btn-lg">Open the Form →</a>
+      </div>
+    </aside>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>Surpass IQ Community Skills &mdash; <a href="CONTRIBUTING.md">Contributing Guide</a> &middot; <a href="https://surpass.com" target="_blank" rel="noopener">Surpass</a></p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-mark">S</span>
+          <span class="nav-logo-text">
+            <span>Surpass IQ Skills</span>
+            <span class="nav-logo-sub">Community Library</span>
+          </span>
+        </a>
+        <p>A curated collection of Claude Code Skills for Surpass IQ. Built and reviewed by the Surpass community — ready to drop into your workflows.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Library</h4>
+        <ul>
+          <li><a href="index.html">Browse skills</a></li>
+          <li><a href="submit.html">Submit a skill</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Surpass Assessment</span>
+      <span class="tagline">Powering Assessment</span>
+    </div>
   </footer>
 
 </body>

@@ -4,53 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Browse and download community-created Claude Code Skills for Surpass IQ — reviewed and curated by the Surpass team.">
-  <title>Surpass IQ Community Skills</title>
+  <title>Surpass IQ Community Skills — The Skills Library</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation / masthead -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-mark">S</span>
-        Surpass IQ Skills
+        <span class="nav-logo-text">
+          <span>Surpass IQ Skills</span>
+          <span class="nav-logo-sub">Community Library</span>
+        </span>
       </a>
       <div class="nav-links">
-        <a href="index.html" class="nav-link active">Browse Skills</a>
+        <a href="index.html" class="nav-link active">Browse</a>
+        <a href="guidelines.html" class="nav-link">Guidelines</a>
         <a href="submit.html" class="nav-link nav-link-cta">Submit a Skill</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — editorial cover -->
   <header class="hero">
     <div class="hero-inner">
-      <h1 class="hero-title">Community Skills Library</h1>
-      <p class="hero-subtitle">Discover and download community-created Claude Code Skills for Surpass IQ — ready to use, reviewed by the team.</p>
-      <div class="search-wrap">
-        <input
-          type="search"
-          id="search"
-          class="search-input"
-          placeholder="Search skills by title or description…"
-          aria-label="Search skills"
-          autocomplete="off"
-        >
-        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"/>
-          <path d="m21 21-4.35-4.35"/>
-        </svg>
+      <div class="hero-left">
+        <div class="hero-eyebrow-row">
+          <span class="eyebrow">The Skills Library</span>
+          <span class="hero-issue">Vol. 01 · 2025</span>
+        </div>
+        <h1 class="hero-title">
+          Expert prompts for <span class="accent">Surpass&nbsp;IQ</span>, curated by the community.
+        </h1>
+        <p class="hero-subtitle">Ready-to-deploy Claude Code Skills that turn Surpass IQ into a specialist assistant — authored by practitioners, reviewed by the Surpass team, published in minutes.</p>
+        <div class="search-wrap">
+          <input
+            type="search"
+            id="search"
+            class="search-input"
+            placeholder="Search skills, tags, techniques…"
+            aria-label="Search skills"
+            autocomplete="off"
+          >
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
       </div>
+      <aside class="hero-stats" aria-label="Library statistics">
+        <div class="hero-stat">
+          <span class="hero-stat-num" id="stat-skills">0<span class="dot"></span></span>
+          <span class="hero-stat-label">Published Skills</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" id="stat-categories">5</span>
+          <span class="hero-stat-label">Categories</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">&lt;5d</span>
+          <span class="hero-stat-label">Review Turnaround</span>
+        </div>
+      </aside>
     </div>
   </header>
 
-  <!-- Category Filters -->
+  <!-- Category filter rail -->
   <section class="filters" aria-label="Filter by category">
     <div class="filters-inner">
-      <button class="filter-btn active" data-category="all">All</button>
+      <span class="filters-label">Filter</span>
+      <button class="filter-btn active" data-category="all">All Skills</button>
       <button class="filter-btn" data-category="Item Authoring">Item Authoring</button>
       <button class="filter-btn" data-category="Tag Management">Tag Management</button>
       <button class="filter-btn" data-category="Bulk Workflows">Bulk Workflows</button>
@@ -59,36 +88,70 @@
     </div>
   </section>
 
-  <!-- Skills Grid -->
+  <!-- Skills grid -->
   <main class="main" id="main-content">
+    <div class="main-header">
+      <h2 class="main-header-title" id="grid-title">All Skills <span class="thin" id="grid-count"></span></h2>
+      <span class="main-header-meta">Sorted · Newest first</span>
+    </div>
     <div class="cards-grid" id="cards-grid" aria-live="polite" aria-label="Skills">
       <!-- Rendered by JS -->
     </div>
     <div class="empty-state" id="empty-state" hidden role="status">
+      <span class="eyebrow">No matches</span>
       <p>No skills match your search. Try a different term or category.</p>
     </div>
   </main>
 
-  <!-- CTA Banner -->
+  <!-- CTA banner -->
   <section class="cta-banner">
     <div class="cta-inner">
-      <p class="cta-text">Have a skill to share with the community?</p>
-      <a href="submit.html" class="btn btn-outline" style="border-color: var(--surpass-dark-grey); background: #fff;">Submit a Skill →</a>
+      <div>
+        <span class="eyebrow">Share your expertise</span>
+        <h2 class="cta-title">Built something useful? <em>Publish it here.</em></h2>
+      </div>
+      <div class="cta-actions">
+        <a href="submit.html" class="btn btn-yellow btn-lg">Submit a Skill <span class="arrow">→</span></a>
+        <a href="CONTRIBUTING.md" class="btn btn-outline btn-lg">Read the Guide</a>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer / colophon -->
   <footer class="footer">
-    <p>Surpass IQ Community Skills &mdash; <a href="CONTRIBUTING.md">Contributing Guide</a> &middot; <a href="https://surpass.com" target="_blank" rel="noopener">Surpass</a></p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-mark">S</span>
+          <span class="nav-logo-text">
+            <span>Surpass IQ Skills</span>
+            <span class="nav-logo-sub">Community Library</span>
+          </span>
+        </a>
+        <p>A curated collection of Claude Code Skills for Surpass IQ. Built and reviewed by the Surpass community — ready to drop into your workflows.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Library</h4>
+        <ul>
+          <li><a href="index.html">Browse skills</a></li>
+          <li><a href="submit.html">Submit a skill</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Surpass Assessment</span>
+      <span class="tagline">Powering Assessment</span>
+    </div>
   </footer>
 
-  <!-- Skill Detail Modal -->
+  <!-- Skill detail modal -->
   <div class="modal-overlay" id="modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal">
       <div class="modal-header">
         <div>
-          <h2 class="modal-title" id="modal-title"></h2>
           <span class="modal-category" id="modal-category"></span>
+          <h2 class="modal-title" id="modal-title"></h2>
         </div>
         <button class="modal-close" id="modal-close" aria-label="Close skill detail">&times;</button>
       </div>
@@ -96,8 +159,11 @@
         <!-- Rendered markdown -->
       </div>
       <div class="modal-footer">
-        <button class="btn btn-outline" id="modal-download">Download SKILL.md</button>
-        <button class="btn btn-primary" id="modal-close-btn">Close</button>
+        <div class="modal-footer-meta" id="modal-footer-meta"></div>
+        <div class="modal-footer-actions">
+          <button class="btn btn-outline" id="modal-download">Download .md</button>
+          <button class="btn btn-primary" id="modal-close-btn">Close</button>
+        </div>
       </div>
     </div>
   </div>
@@ -109,6 +175,7 @@
     let searchQuery = '';
     let currentSkillFile = '';
     let currentSkillId = '';
+    let currentSkill = null;
 
     // ── Load skills from index ─────────────────────────────────────────────────
     async function loadSkills() {
@@ -117,11 +184,30 @@
         const res = await fetch('skills/_index.json');
         if (!res.ok) throw new Error('Network response was not OK');
         allSkills = await res.json();
+        // Sort newest-first by date
+        allSkills.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+        updateStats();
         renderCards();
       } catch (err) {
-        grid.innerHTML = '<p class="load-error" style="padding:24px">Could not load skills. Please check your connection and try again.</p>';
+        grid.innerHTML = '<p class="load-error">Could not load skills. Please check your connection and try again.</p>';
         console.error('Failed to load skills/_index.json:', err);
       }
+    }
+
+    // ── Animated stat counter ──────────────────────────────────────────────────
+    function updateStats() {
+      const target = allSkills.length;
+      const el = document.getElementById('stat-skills');
+      let n = 0;
+      const tick = () => {
+        n = Math.min(target, n + Math.max(1, Math.ceil(target / 20)));
+        el.innerHTML = n + '<span class="dot"></span>';
+        if (n < target) requestAnimationFrame(tick);
+      };
+      tick();
+
+      const cats = new Set(allSkills.map(s => s.category)).size;
+      document.getElementById('stat-categories').textContent = cats || 5;
     }
 
     // ── Render filtered cards ──────────────────────────────────────────────────
@@ -138,6 +224,11 @@
 
       const grid = document.getElementById('cards-grid');
       const empty = document.getElementById('empty-state');
+      const gridTitle = document.getElementById('grid-title');
+      const gridCount = document.getElementById('grid-count');
+
+      gridTitle.firstChild.nodeValue = activeCategory === 'all' ? 'All Skills ' : activeCategory + ' ';
+      gridCount.textContent = `/ ${String(filtered.length).padStart(2, '0')}`;
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
@@ -146,35 +237,50 @@
       }
 
       empty.hidden = true;
-      grid.innerHTML = filtered.map(skill => `
-        <article class="card" data-category="${esc(skill.category)}" data-id="${esc(skill.id)}" data-title="${esc(skill.title)}" data-skill-file="${esc(skill.skill_file)}">
+      grid.innerHTML = filtered.map((skill, i) => {
+        const idx = String(i + 1).padStart(2, '0');
+        const tags = (skill.tags || []).slice(0, 3).map(t => `<span class="card-tag">#${esc(t)}</span>`).join('');
+        return `
+        <article class="card"
+                 data-category="${esc(skill.category)}"
+                 data-id="${esc(skill.id)}"
+                 data-title="${esc(skill.title)}"
+                 data-skill-file="${esc(skill.skill_file)}"
+                 data-index="${idx}"
+                 style="--card-index:${i}">
           <div class="card-top">
-            <span class="badge">${esc(skill.category)}</span>
+            <span class="card-category">${esc(skill.category)}</span>
             <h3 class="card-title">${esc(skill.title)}</h3>
             <p class="card-desc">${esc(skill.description)}</p>
+            ${tags ? `<div class="card-tags">${tags}</div>` : ''}
           </div>
           <div class="card-meta">
             <span>${esc(skill.author || 'Surpass Community')}</span>
             <span>${formatDate(skill.date)}</span>
           </div>
           <div class="card-actions">
-            <button class="btn btn-primary" data-action="view" aria-label="View ${esc(skill.title)}">View</button>
-            <button class="btn btn-outline" data-action="download" aria-label="Download ${esc(skill.title)}">Download</button>
+            <button class="btn btn-primary" data-action="view" aria-label="View ${esc(skill.title)}">View Skill <span class="arrow">→</span></button>
+            <button class="btn btn-outline" data-action="download" aria-label="Download ${esc(skill.title)}" title="Download .md">↓</button>
           </div>
         </article>
-      `).join('');
+        `;
+      }).join('');
     }
 
     // ── Event delegation for card buttons ─────────────────────────────────────
     document.getElementById('cards-grid').addEventListener('click', e => {
       const btn = e.target.closest('[data-action]');
-      if (!btn) return;
-      const card = btn.closest('.card');
+      const card = e.target.closest('.card');
       if (!card) return;
       const { id, title, skillFile } = card.dataset;
       const category = card.dataset.category;
-      if (btn.dataset.action === 'view') openModal(id, title, category, skillFile);
-      if (btn.dataset.action === 'download') downloadSkill(skillFile, id);
+      if (btn && btn.dataset.action === 'download') {
+        e.stopPropagation();
+        downloadSkill(skillFile, id);
+        return;
+      }
+      // Any other click on the card opens the modal
+      openModal(id, title, category, skillFile);
     });
 
     // ── Category filter ────────────────────────────────────────────────────────
@@ -197,9 +303,22 @@
     async function openModal(id, title, category, skillFile) {
       currentSkillFile = skillFile;
       currentSkillId = id;
+      currentSkill = allSkills.find(s => s.id === id) || null;
 
       document.getElementById('modal-title').textContent = title;
       document.getElementById('modal-category').textContent = category;
+
+      const metaEl = document.getElementById('modal-footer-meta');
+      if (currentSkill) {
+        metaEl.innerHTML = `
+          <span>${esc(currentSkill.author || 'Community')}</span>
+          <span>v${esc(currentSkill.version || '1.0')}</span>
+          <span>${formatDate(currentSkill.date)}</span>
+        `;
+      } else {
+        metaEl.innerHTML = '';
+      }
+
       document.getElementById('modal-body').innerHTML = '<p class="loading">Loading skill content…</p>';
 
       const overlay = document.getElementById('modal-overlay');
@@ -276,7 +395,6 @@
       }
     }
 
-    // ── Init ───────────────────────────────────────────────────────────────────
     loadSkills();
   </script>
 

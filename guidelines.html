@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contributing guidelines for the Surpass IQ Community Skills library — skill file format, submission process, and quality guidelines.">
+  <title>Guidelines — Surpass IQ Community Skills</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">S</span>
+        <span class="nav-logo-text">
+          <span>Surpass IQ Skills</span>
+          <span class="nav-logo-sub">Community Library</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Browse</a>
+        <a href="guidelines.html" class="nav-link active">Guidelines</a>
+        <a href="submit.html" class="nav-link nav-link-cta">Submit a Skill</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="eyebrow">Contributing</span>
+      <h1 class="page-title">Guidelines for authoring a <em>great skill.</em></h1>
+      <p class="page-subtitle">Everything you need to know to format, submit, and maintain a Claude Code Skill in the Surpass IQ Community Library — written for authors, not engineers.</p>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <div class="page-content">
+    <div class="page-content-main">
+
+      <section class="content-section">
+        <h2><span class="section-num">01.</span> What is a skill?</h2>
+        <p>A <strong>Skill</strong> is a structured instruction set — typically a system prompt or workflow guide — that configures Surpass IQ to perform a specific task exceptionally well. Skills should be <strong>focused</strong>, <strong>tested</strong>, and <strong>useful to a broad audience</strong>.</p>
+        <p>A good skill captures expert knowledge once so that any Surpass IQ user can benefit without reinventing it.</p>
+      </section>
+
+      <section class="content-section">
+        <h2><span class="section-num">02.</span> Submission process</h2>
+        <ol class="review-steps">
+          <li><strong>Submit.</strong> Head to the <a href="submit.html">Submit a Skill</a> page and complete the Google Form — no GitHub account or coding required.</li>
+          <li><strong>Review.</strong> The Surpass team reads and tests your submission, usually within 5 working days.</li>
+          <li><strong>Format.</strong> If approved, a team member formats your skill into the correct file structure and merges it into the repository.</li>
+          <li><strong>Publish.</strong> The site updates automatically within ~1 minute of merging.</li>
+        </ol>
+      </section>
+
+      <section class="content-section">
+        <h2><span class="section-num">03.</span> Skill file format</h2>
+        <p>Each skill lives in its own folder under <code>skills/</code> and consists of two files:</p>
+        <pre><code>skills/
+└── your-skill-id/
+    ├── SKILL.md      ← The skill content
+    └── meta.json     ← Metadata</code></pre>
+
+        <h3 class="content-subhead">SKILL.md</h3>
+        <p>Write your skill in Markdown. A well-structured skill file includes these sections:</p>
+        <div class="spec-table" role="table" aria-label="SKILL.md sections">
+          <div class="spec-row spec-head" role="row">
+            <span role="columnheader">Section</span>
+            <span role="columnheader">Description</span>
+          </div>
+          <div class="spec-row" role="row">
+            <span role="cell"><code># Title</code></span>
+            <span role="cell">The skill name as an H1 heading</span>
+          </div>
+          <div class="spec-row" role="row">
+            <span role="cell"><strong>Purpose</strong></span>
+            <span role="cell">One paragraph explaining what the skill does and when to use it</span>
+          </div>
+          <div class="spec-row" role="row">
+            <span role="cell"><strong>How to Activate</strong></span>
+            <span role="cell">Brief instructions for loading the skill</span>
+          </div>
+          <div class="spec-row" role="row">
+            <span role="cell"><strong>Skill Instructions</strong></span>
+            <span role="cell">The core instruction block (usually inside a fenced code block)</span>
+          </div>
+          <div class="spec-row" role="row">
+            <span role="cell"><strong>Example Output</strong></span>
+            <span role="cell">A realistic example showing the skill in action</span>
+          </div>
+          <div class="spec-row" role="row">
+            <span role="cell"><strong>Tips for Best Results</strong></span>
+            <span role="cell">3–5 bullet points of practical guidance</span>
+          </div>
+        </div>
+
+        <h3 class="content-subhead">meta.json</h3>
+<pre><code>{
+  "id": "your-skill-id",
+  "title": "Human-Readable Skill Title",
+  "description": "One or two sentences shown on the skill card.",
+  "category": "Item Authoring",
+  "tags": ["keyword1", "keyword2"],
+  "author": "Your Name or Organisation",
+  "version": "1.0",
+  "date": "YYYY-MM-DD",
+  "skill_file": "skills/your-skill-id/SKILL.md"
+}</code></pre>
+
+        <p><strong>Valid categories:</strong></p>
+        <div class="chip-row">
+          <span class="chip" data-cat="Item Authoring">Item Authoring</span>
+          <span class="chip" data-cat="Tag Management">Tag Management</span>
+          <span class="chip" data-cat="Bulk Workflows">Bulk Workflows</span>
+          <span class="chip" data-cat="Analysis">Analysis</span>
+          <span class="chip" data-cat="Other">Other</span>
+        </div>
+        <p style="margin-top: 18px;"><strong>Skill ID:</strong> lowercase letters and hyphens only — e.g. <code>item-authoring</code>, <code>bulk-tagging-workflow</code>.</p>
+      </section>
+
+      <section class="content-section">
+        <h2><span class="section-num">04.</span> Quality guidelines</h2>
+        <ul>
+          <li><strong>One skill, one job.</strong> Focused skills are easier to use and maintain than kitchen-sink prompts.</li>
+          <li><strong>Tested.</strong> Use the skill yourself before submitting — and include a real example of its output.</li>
+          <li><strong>Generalisable.</strong> Avoid hardcoding institution-specific content; parameterise where possible.</li>
+          <li><strong>Clear instructions.</strong> Another user should be able to activate and use the skill without asking you questions.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2><span class="section-num">05.</span> Updating an existing skill</h2>
+        <p>If you'd like to update or improve an existing community skill, submit a new version via the Google Form and note which skill you're updating and what changed. The team will review and replace the existing file if the update is an improvement.</p>
+      </section>
+
+    </div>
+
+    <!-- Sticky sidebar CTA -->
+    <aside class="page-content-aside">
+      <div class="submit-cta">
+        <span class="eyebrow">Ready to contribute?</span>
+        <h3>Submit your skill</h3>
+        <p>Once your skill follows these guidelines, send it our way via the submission form.</p>
+        <a href="submit.html" class="btn btn-yellow btn-lg">Submit a Skill →</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-mark">S</span>
+          <span class="nav-logo-text">
+            <span>Surpass IQ Skills</span>
+            <span class="nav-logo-sub">Community Library</span>
+          </span>
+        </a>
+        <p>A curated collection of Claude Code Skills for Surpass IQ. Built and reviewed by the Surpass community — ready to drop into your workflows.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Library</h4>
+        <ul>
+          <li><a href="index.html">Browse skills</a></li>
+          <li><a href="submit.html">Submit a skill</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Surpass Assessment</span>
+      <span class="tagline">Powering Assessment</span>
+    </div>
+  </footer>
+
+</body>
+</html>
