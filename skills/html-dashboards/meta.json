@@ -1,0 +1,11 @@
+{
+  "id": "html-dashboards",
+  "title": "HTML Reporting Dashboards",
+  "description": "Generates self-contained HTML dashboards from Surpass IQ reporting data — item performance, tag coverage, status breakdowns — using inline charts and tables, no build step required.",
+  "category": "Analysis",
+  "tags": ["dashboard", "reporting", "HTML", "charts", "analytics", "visualisation"],
+  "author": "Surpass Community",
+  "version": "1.0",
+  "date": "2026-05-15",
+  "skill_file": "skills/html-dashboards/SKILL.md"
+}
