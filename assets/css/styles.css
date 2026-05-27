@@ -121,28 +121,11 @@ img { display: block; max-width: 100%; }
 }
 
 .nav-logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  background: var(--surpass-dark-grey);
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: 4px;
-  position: relative;
+  display: block;
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
   transition: transform var(--t);
-}
-.nav-logo-mark::after {
-  content: "";
-  position: absolute;
-  right: -3px;
-  bottom: -3px;
-  width: 10px;
-  height: 10px;
-  background: var(--surpass-yellow);
-  border-radius: 2px;
 }
 .nav-logo:hover .nav-logo-mark { transform: rotate(-4deg); }
 
